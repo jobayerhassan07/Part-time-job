@@ -1,0 +1,224 @@
+:root{--bg:#f6f7f4;
+    --card:#fff;
+    --tx:#1d2a24;
+    --mu:#5d6b64;
+    --pr:#0f7a55;
+    --pr2:#e3f3ec;
+    --bd:#dde3df;
+    --hd:#0f7a55;
+    --on:#fff;
+    --er:#b3261e;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px)}
+
+
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a16;
+    --card:#1b2620;--tx:#e8efeb;
+    --mu:#9fb0a7;--pr:#3fcf9a;
+    --pr2:#1f3a2f;--bd:#2c3b33;
+    --hd:#17503b;--on:#0b1f16;--er:#ff8a80}}
+
+
+
+:root[data-theme="dark"]{--bg:#121a16;--card:#1b2620;--tx:#e8efeb;
+    --mu:#9fb0a7;
+    --pr:#3fcf9a;
+    --pr2:#1f3a2f;
+    --bd:#2c3b33;
+    --hd:#17503b;
+    --on:#0b1f16;
+    --er:#ff8a80}
+
+*{box-sizing:border-box}html{color-scheme:light dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+
+body{margin:0;background:var(--bg);
+    color:var(--tx);
+    font-family:'Hind Siliguri','Noto Sans Bengali','Segoe UI',sans-serif;line-height:1.5}
+
+
+
+.w{max-width:1000px;
+    margin:auto;
+    padding:0 16px}
+
+header{background:var(--hd);color:#fff;
+    padding:28px 0 36px}
+
+header h1{margin:0 0 6px;
+    font-size:1.7rem}header p{margin:0;
+        opacity:.92}
+
+nav{display:flex;
+    gap:8px;
+    margin-top:16px;
+    flex-wrap:wrap}
+
+
+nav button{border:1px solid rgba(255,255,255,.5);
+    background:transparent;color:#fff;
+    padding:8px 16px;border-radius:99px;
+    font:inherit;cursor:pointer}
+
+nav button.on{background:#fff;
+    color:var(--hd);
+    font-weight:600}
+
+.bar{display:grid;grid-template-columns:2fr 1fr 1fr;
+    gap:8px;margin:-20px 0 14px}
+
+input,select,textarea{width:100%;padding:10px 12px;
+    border:1px solid var(--bd);border-radius:10px;
+    background:var(--card);
+    color:var(--tx);font:inherit}
+
+
+.chips{display:flex;gap:8px;
+    overflow-x:auto;padding:4px 0 12px}
+
+.chip{flex:none;
+    border:1px solid var(--bd);
+    background:var(--card);
+    color:var(--tx);
+    padding:6px 14px;
+    border-radius:99px;
+    font:inherit;
+    cursor:pointer}
+
+.chip.on{background:var(--pr);
+    color:var(--on);
+    border-color:var(--pr)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+
+.card{background:var(--card);border:1px solid var(--bd);
+    border-radius:14px;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    gap:6px}
+
+.card h3{margin:0;
+    font-size:1.05rem}.mu{color:var(--mu);font-size:.9rem}
+
+.tag{display:inline-block;
+    background:var(--pr2);
+    color:var(--pr);
+    border-radius:6px;
+    padding:1px 8px;font-size:.8rem;
+    margin:0 4px 4px 0}
+
+.pay{font-weight:700;
+    color:var(--pr)}
+
+
+.btn{background:var(--pr);color:var(--on);border:0;
+    border-radius:10px;
+    padding:9px 14px;
+    font:inherit;
+    font-weight:600;
+    cursor:pointer}
+
+
+.card .btn{margin-top:auto}
+
+.pane{display:none;
+    padding-bottom:40px}.pane.on{display:block}
+
+
+.box{background:var(--card);border:1px solid var(--bd);
+    border-radius:14px;
+    padding:18px;
+    max-width:560px}
+label{display:block;
+    margin:10px 0 4px;font-weight:500}
+
+
+.row{display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px}
+
+
+.m{position:fixed;inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;align-items:center;
+    justify-content:center;
+    padding:16px;z-index:20}
+
+
+.m.on{display:flex}.m .box{width:100%;max-height:90vh;overflow:auto}
+
+
+.ok{color:var(--pr);
+    font-weight:600;
+    margin-top:10px}
+
+
+footer{text-align:center;
+    color:var(--mu);
+    padding:20px;
+    font-size:.85rem}
+
+
+@media(max-width:640px){.bar{grid-template-columns:1fr}}
+
+
+.ok.err{color:var(--er)}
+
+
+.mb{margin-bottom:8px}.flush{margin-top:0}.gap{margin-top:18px}.mt{margin-top:14px}
+
+
+.actions{display:flex;gap:8px;margin-top:14px}
+
+a.mu{text-decoration:none}textarea{resize:vertical}
+
+:focus-visible{outline:3px solid var(--pr);outline-offset:2px}
+
+[hidden]{display:none!important}
+
+.pic{display:flex;align-items:center;gap:12px}.pic input{flex:1;min-width:0}
+
+.avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;background:var(--pr2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex:none;overflow:hidden}
+
+
+.card-head{display:flex;align-items:center;gap:12px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
